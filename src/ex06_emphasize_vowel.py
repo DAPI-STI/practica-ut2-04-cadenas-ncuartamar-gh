@@ -27,5 +27,3 @@ def emphasize_vowel(phrase: str, vowel: str) -> str:
         else:
             result += char
     return result
-
-print(emphasize_vowel("Nelson", "e"))

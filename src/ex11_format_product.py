@@ -12,11 +12,8 @@ unidades con 3 dígitos (relleno con ceros)
 coste total (precio * unidades) con 8 enteros y 2 decimales
 """
 
-def format_product(name: str, price: float, units: float) -> str:
+def format_product(name: str, price: float, units: int) -> str:
     """Devuelve una descripción de producto formateada con anchuras fijas."""
     # TODO: usa f-strings y formatos tipo {price:9.2f}, {units:03d}, {total:11.2f}
     total = price * units
-    return (f"Producto: {name}\n"
-            f"Precio unitario: {price:9.2f} EUR\n"
-            f"Unidades: {units:03d}\n"
-            f"Coste total: {total:11.2f} EUR")
+    return f"{name}      {price:.2f} {units:03d}       {total:.2f}"
