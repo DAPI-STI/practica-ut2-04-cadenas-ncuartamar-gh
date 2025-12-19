@@ -18,4 +18,14 @@ def emphasize_vowel(phrase: str, vowel: str) -> str:
     - Recorre la frase carácter a carácter y construye una nueva cadena.
     """
     # TODO: validar y transformar
-    raise NotImplementedError("Implementa emphasize_vowel(phrase, vowel)")
+    if len(vowel) != 1 or vowel.lower() not in "aeiou":
+        raise ValueError("La vocal debe ser una sola letra entre 'a', 'e', 'i', 'o', 'u'.")
+    result = ""
+    for char in phrase:
+        if char.lower() == vowel.lower():
+            result += char.upper()
+        else:
+            result += char
+    return result
+
+print(emphasize_vowel("Nelson", "e"))
